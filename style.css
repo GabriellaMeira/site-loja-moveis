@@ -1,0 +1,180 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f8f8f8;
+    color: #2c2c2c;
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+  }
+  
+  nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #c0aa63; /* dourado suave */
+  }
+  
+  /* Banner */
+  .banner {
+    background: url('images/banner.jpg') center/cover no-repeat;
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+  }
+  
+  .banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .banner .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+  
+  .banner p {
+    font-size: 20px;
+  }
+  
+  /* Seções */
+  section {
+    padding: 80px 0;
+  }
+  
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #2c2c2c;
+  }
+  
+  /* Produtos */
+  .grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+  }
+  
+  .produto {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  }
+  
+  .produto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  .produto h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .produto p {
+    color: #006b6b;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  /* Sobre */
+  .sobre p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    text-align: center;
+    color: #444;
+  }
+  
+  /* Contato */
+  .contato p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  footer {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  /* Responsividade extra */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 24px;
+    }
+  
+    .banner h2 {
+      font-size: 30px;
+    }
+  
+    h2 {
+      font-size: 26px;
+    }
+  
+    .produto h3 {
+      font-size: 18px;
+    }
+  }
