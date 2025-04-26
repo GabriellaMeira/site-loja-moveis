@@ -11,7 +11,36 @@
   <header>
 
     <div class="container">
+  
       <h1>Casa & Conforto Móveis</h1>
+      <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuLateral = document.querySelector('.menu-lateral');
+      
+        menuToggle.addEventListener('click', () => {
+          menuLateral.classList.toggle('ativo');
+        });
+      
+        const botoesFiltro = document.querySelectorAll('.filtro-btn');
+        const produtos = document.querySelectorAll('.produto');
+      
+        botoesFiltro.forEach(botao => {
+          botao.addEventListener('click', () => {
+            const categoria = botao.getAttribute('data-filtro');
+      
+            produtos.forEach(produto => {
+              if (categoria === "todos" || produto.dataset.categoria === categoria) {
+                produto.style.display = 'block';
+              } else {
+                produto.style.display = 'none';
+              }
+            });
+      
+            // Fecha o menu depois de escolher
+            menuLateral.classList.remove('ativo');
+          });
+        });
+      </script>
       <nav>
         <ul>
           <li><a href="#sobre">Sobre</a></li>
@@ -42,41 +71,76 @@
     <div class="container">
       <h2>Produtos em Destaque</h2>
       <div class="grid-produtos">
-        <div class="produto">
+        <div class="produto" data-categoria="sofa">
           <img src="img/img2.png" alt="Sofá Confort Plus" />
           <h3>Sofá Retrátil Confort Plus</h3>
           <p>R$ 2.490,00</p>
         </div>
-        <div class="produto">
+        <div class="produto" data-categoria="mesa">
           <img src="img/img3.jpg" alt="Mesa de Jantar" />
           <h3>Mesa de Jantar 6 Lugares</h3>
           <p>R$ 1.790,00</p>
         </div>
-        <div class="produto">
+        <div class="produto" data-categoria="poltrona">
           <img src="img/img1.jpeg" alt="Poltrona Elegance" />
           <h3>Poltrona Elegance</h3>
           <p>R$ 849,00</p>
         </div>
-        <div class="produto">
-            <img src="img/img4.jpg" alt="Estande de livros" />
-            <h3>Estande de livros</h3>
-            <p>R$ 590,00</p>
+        <div class="produto" data-categoria="poltrona">
+          <img src="img/poltrona-madeira.png" alt="poltrona" />
+          <h3>Poltrona com base em madeira</h3>
+          <p>R$ 1.320,00</p>
       </div>
-        <div class="produto">
-        <img src="img/img6.jpeg" alt="kit pia banheiro" />
-        <h3>kit pia banheiro</h3>
-        <p>R$ 199,00</p>
-    </div>
-        <div class="produto">
+        <div class="produto" data-categoria="cozinha-completa">
+        <img src="img/cozinha-completa-1000x1000.png" alt="cozinha completa" />
+        <h3>Cozinha Completa</h3>
+        <p>R$ 2.599,00</p>
+      </div>
+      <div class="produto" data-categoria="cozinha">
+        <img src="img/cozinha-5-1000x1000.png" alt="cozinha" />
+        <h3>Cozinha 5 peças</h3>
+        <p>R$ 1.250,00</p>
+      </div>
+        <div class="produto" data-categoria="rack-tv">
         <img src="img/img5.jpeg" alt="Rack para TV" />
         <h3>Rack para TV</h3>
         <p>R$ 659,00</p>
     </div>
-    <div class="produto">
+    <div class="produto" data-categoria="mesa-cabeceira">
         <img src="img/img7.png" alt="Mesa de cabeceira" />
         <h3>Mesa de cabeceira</h3>
         <p>R$ 478,00</p>
     </div>
+        <div class="produto" data-categoria="guarda-roupa">
+          <img src="img/img8.png" alt="Guarda-roupa" />
+          <h3>Guarda-roupa 6 portas</h3>
+          <p>R$ 1.470,00</p>
+    </div>
+    <div class="produto" data-categoria="beliche">
+      <img src="img/beliche-1000x1000.png" alt="beliche" />
+      <h3>Beliche</h3>
+      <p>R$ 960,00</p>
+  </div>
+  <div class="produto" data-categoria="cama">
+      <img src="img/cama.png" alt="cama" />
+      <h3>Cama Casal</h3>
+      <p>R$ 1.100,00</p>
+  </div>
+  <div class="produto" data-categoria="comoda">
+      <img src="img/comoda.png" alt="comoda" />
+      <h3>Comoda</h3>
+      <p>R$ 684,00</p>
+  </div>
+  <div class="produto" data-categoria="buffet">
+      <img src="img/buffet-aparador.png" alt="buffet" />
+      <h3>Buffet aparador</h3>
+      <p>R$ 890,00</p>
+  </div>
+   <div class="produto" data-categoria="armario">
+    <img src="img/kit-armario-escritorio.png" alt="armario" />
+    <h3>Armário para escritório</h3>
+    <p>R$ 870,00</p>
+</div>
     </div>
   </section>
 
@@ -94,5 +158,6 @@
       <p>&copy; 2025 Casa & Conforto Móveis – Todos os direitos reservados</p>
     </div>
   </footer>
+  <script src="scroll.js"></script>
 </body>
 </html>
