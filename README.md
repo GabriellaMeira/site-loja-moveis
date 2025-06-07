@@ -10,7 +10,7 @@ conforto e qualidade para todos os ambientes da casa.
 🛋️ *Sobre o Projeto*
 
 
-O Casa & Conforto Móveis é um site estático criado com HTML5 e CSS3, focado em oferecer:
+O Casa & Conforto Móveis é um site estático criado com HTML5, CSS3 e JavaScript, focado em oferecer:
 
 Navegação fácil por categorias de produtos
 
