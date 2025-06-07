@@ -7,7 +7,7 @@
   
   body {
     font-family: 'Lato', sans-serif;
-    background-color: #f8f8f8;
+    background-color: #dcdcdc;
     color: #2c2c2c;
     line-height: 1.6;
   }
@@ -20,7 +20,7 @@
   
   /* Cabeçalho */
   header {
-    background-color: #1c1c1c;
+    background-color: #696969;
     color: #fff;
     padding: 20px 0;
   }
@@ -54,9 +54,9 @@
   
   /* Banner */
   .banner {
-    background: url('images/banner.jpg') center/cover no-repeat;
+    background: url('img/fundo.jpeg') center/cover no-repeat;
     color: white;
-    padding: 120px 0;
+    padding: 150px 0;
     text-align: center;
     position: relative;
   }
@@ -65,7 +65,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3);
   }
   
   .banner .container {
@@ -93,8 +93,21 @@
     font-size: 32px;
     margin-bottom: 30px;
     text-align: center;
-    color: #2c2c2c;
+    color: #DCDCDC;
   }
+
+#sobre h2 {
+  color: black;
+}
+
+#produtos h2 {
+  color: black; 
+}
+
+#contato h2 {
+  color: black;
+}
+
   
   /* Produtos */
   .grid-produtos {
