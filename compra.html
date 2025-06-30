@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Finalizar Compra - Casa & Conforto</title>
+  <link rel="stylesheet" href="compra.css" />
+</head>
+
+<body>
+  <header class="container">
+    <h1>Finalizar Compra</h1>
+    <nav>
+      <a href="index.html" class="botao-voltar">← Voltar à loja</a>
+    </nav>
+
+  </header>
+
+  <section class="container produto-detalhes">
+    <img id="imagem-produto" src="" alt="Produto Selecionado" />
+    <div class="info">
+      <h2 id="nome-produto">Produto</h2>
+      <p class="preco" id="preco-produto">Preço</p>
+
+      <div class="acoes-compra">
+        <button class="botao-finalizar">🛒 Finalizar Compra</button>
+      </div>
+
+      <div class="formas-pagamento">
+        <h3>Formas de Pagamento</h3>
+        <ul>
+          <li>💳 Cartão de Crédito (até 12x sem juros)</li>
+          <li>🏦 Boleto Bancário</li>
+          <li>📱 Pix com 10% de desconto</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Calcular Frete</h3>
+        <label for="cep">Digite seu CEP:</label><br />
+        <input type="text" id="cep" placeholder="Ex: 01234-567" />
+        <button onclick="calcularFrete()">Calcular</button>
+        <p id="resultado-frete"></p>
+      </div>
+    </div>
+  </section>
+  <script src="compra.js"></script>
+  <script>
+   document.querySelector('.botao-finalizar').addEventListener('click', function () {
+    const imagem = encodeURIComponent(document.getElementById('imagem-produto').src);
+    const nome = encodeURIComponent(document.getElementById('nome-produto').textContent);
+    const preco = encodeURIComponent(document.getElementById('preco-produto').textContent);
+
+    window.location.href = `finalizarCompra.html?nome=${nome}&preco=${preco}&imagem=${imagem}`;
+  });
+</script>
+
+</body>
+</html>

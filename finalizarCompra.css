@@ -1,0 +1,113 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #e5e5e5;
+  margin: 0;
+  padding: 40px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.botao-voltar {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.botao-voltar:hover {
+  background-color: #f0f0f0;
+}
+
+.produto-detalhes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.produto-detalhes img {
+  width: 420px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.info {
+  flex: 1;
+  min-width: 250px;
+}
+
+#nome-produto {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#preco-produto {
+  font-size: 22px;
+  font-weight: bold;
+  color: #d32f2f;
+  margin-bottom: 20px;
+}
+
+.botao-finalizar {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.botao-finalizar:hover {
+  background-color: #45a049;
+}
+
+.formas-pagamento h3,
+#cep {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.formas-pagamento ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.formas-pagamento li {
+  margin-bottom: 8px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  width: 200px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+}

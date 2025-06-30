@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Finalização da Compra - Casa & Conforto</title>
+  <link rel="stylesheet" href="finalizarCompra.css" />
+</head>
+<body>
+
+  <div class="container">
+    <!-- Coluna Esquerda -->
+    <div class="col-esquerda">
+      <div class="etapas">
+        <div class="etapa ativa">📦 Carrinho</div>
+        <div class="etapa ativa">🚚 Entrega</div>
+        <div class="etapa">💳 Pagamento</div>
+      </div>
+
+      <div class="box">
+        <h2>Endereço de Entrega</h2>
+        <label>CEP:</label>
+        <input type="text" placeholder="01234-567" />
+        <label>Rua:</label>
+        <input type="text" />
+        <label>Número:</label>
+        <input type="text" />
+        <label>Complemento:</label>
+        <input type="text" />
+        <label>Bairro:</label>
+        <input type="text" />
+        <label>Cidade:</label>
+        <input type="text" />
+        <label>Estado:</label>
+        <input type="text" />
+      </div>
+    </div>
+
+    <!-- Coluna Direita -->
+    <section class="container produto-detalhes">
+    <img id="imagem-produto" src="" alt="Produto Selecionado" />
+    <div class="info">
+      <h2 id="nome-produto">Produto</h2>
+      <p class="preco" id="preco-produto">Preço</p>
+      <button class="botao-continuar">Ir para Pagamento</button>
+    </div>
+  </div>
+<script>
+  // Função para obter parâmetros da URL
+  function obterParametro(nome) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(nome);
+  }
+
+  // Pegando os valores da URL
+  const nome = decodeURIComponent(obterParametro('nome'));
+  const preco = decodeURIComponent(obterParametro('preco'));
+  const imagem = decodeURIComponent(obterParametro('imagem'));
+
+  // Inserindo no HTML
+  document.getElementById('nome-produto').textContent = nome;
+  document.getElementById('preco-produto').textContent = `R$ ${preco}`;
+  document.getElementById('imagem-produto').src = imagem;
+</script>
+
+</body>
+</html>
